@@ -11,6 +11,8 @@ def input_error(func):
     return inner
 
 def parse_input(user_input):
+    if not user_input:
+        return None, []
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
     return cmd, *args
@@ -57,7 +59,7 @@ def main ():
         elif command == "phone":
             print(show_phone(args, contacts))
         elif command == "all":
-            print(show_all(contacts))      
+            print(show_all(contacts))   
         else:
             print("Invalid command.")
 
