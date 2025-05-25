@@ -1,5 +1,5 @@
 def caching_fibonacci():
-    cache = {0: 'invalid value', 1: 0, 2: 1}
+    cache = {0: 0, 1: 1, 2: 1}
 
     def inner(n):
         if n in cache:
